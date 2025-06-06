@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-06T16:19:24.526Z",
+    "end": "2025-06-06T16:19:48.952Z",
+    "duration": 24426,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e5503632-1fb3-467b-96b2-8b142df4c5ab",
+      "title": "",
+      "fullFile": "cypress/e2e/youtube.cy.js",
+      "file": "cypress/e2e/youtube.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dec27bdd-011e-401a-9aba-b12d13b08190",
+          "title": "YouTube Trending",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to trending page, select Movies category and verify video title and channel",
+              "fullTitle": "YouTube Trending should navigate to trending page, select Movies category and verify video title and channel",
+              "timedOut": null,
+              "duration": 15018,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1920, 1080); // Set viewport ke 1920x1080\n_youtube.default.visitTrendingPage();\n_youtube.default.selectMoviesCategory();\n_youtube.default.waitVideoToDisplay();\n_youtube.default.selectThirdTrendingVideo();\n_youtube.default.verifyVideoTitle();\n_youtube.default.verifyChannelName();",
+              "err": {},
+              "uuid": "ccc99803-2b33-4ce9-8649-925a19170ba3",
+              "parentUUID": "dec27bdd-011e-401a-9aba-b12d13b08190",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ccc99803-2b33-4ce9-8649-925a19170ba3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15018,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/html",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

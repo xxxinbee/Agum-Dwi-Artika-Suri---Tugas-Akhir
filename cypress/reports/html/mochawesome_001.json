@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-06T16:17:36.733Z",
+    "end": "2025-06-06T16:18:37.093Z",
+    "duration": 60360,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77bc79fa-95bf-45fc-92f8-5bffe33b26e7",
+      "title": "",
+      "fullFile": "cypress/e2e/agodaBooking.cy.js",
+      "file": "cypress/e2e/agodaBooking.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bac88ff0-a97f-4f78-8105-770cc4d60482",
+          "title": "Agoda Booking",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "successfully booking flight",
+              "fullTitle": "Agoda Booking successfully booking flight",
+              "timedOut": null,
+              "duration": 58841,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "agoda.visit();\nagoda.selectFlightTab();\nagoda.setOrigin(_bookingData.default.passenger.departureCity);\nagoda.setDestination(_bookingData.default.passenger.destinationCity);\nconst tomorrow = new Date();\ntomorrow.setDate(tomorrow.getDate() + 1);\nconst expectedDate = `${tomorrow.getDate()} ${tomorrow.toLocaleString('default', {\n  month: 'short'\n})}`;\nagoda.selectDate(tomorrow);\nagoda.clickSearch();\nagoda.verifyResult(\"Keberangkatan ke Singapura\");\nagoda.selectAirlines(_bookingData.default.passenger.airline);\nagoda.fillContactInfo(_bookingData.default.passenger);\nagoda.fillPassengerDetails(_bookingData.default.passenger);\nagoda.verifyBookingPage(_bookingData.default.passenger, expectedDate);\nagoda.addOn();\nagoda.clickPayment();\nagoda.verifyBookingPayment(_bookingData.default.passenger, expectedDate);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<dd.Descriptionstyled__DescriptionStyled-sc-i382wi-0.dMYfaz.sc-jhSXcr.fUKJDI>' to contain 'Rp 1.101.048'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<dd.Descriptionstyled__DescriptionStyled-sc-i382wi-0.dMYfaz.sc-jhSXcr.fUKJDI>' to contain 'Rp 1.101.048'\n    at Context.eval (webpack://agum-dwi-artika-suri_tugas-akhir/./cypress/e2e/page_objects/agoda.js:104:65)\n    at getRet (https://www.agoda.com/__cypress/runner/cypress_runner.js:120941:20)\n    at tryCatcher (https://www.agoda.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.agoda.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://www.agoda.com/__cypress/runner/cypress_runner.js:120952:66)\n    at Context.then (https://www.agoda.com/__cypress/runner/cypress_runner.js:121203:21)\n    at wrapped (https://www.agoda.com/__cypress/runner/cypress_runner.js:141524:19)",
+                "diff": null
+              },
+              "uuid": "a263ebf0-1d28-4c08-ab27-03d539066293",
+              "parentUUID": "bac88ff0-a97f-4f78-8105-770cc4d60482",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a263ebf0-1d28-4c08-ab27-03d539066293"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 58841,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/html",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

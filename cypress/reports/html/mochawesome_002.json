@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-06T16:18:40.126Z",
+    "end": "2025-06-06T16:19:21.931Z",
+    "duration": 41805,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa84592f-d463-423d-9d73-6640cd91acee",
+      "title": "",
+      "fullFile": "cypress/e2e/amazon.cy.js",
+      "file": "cypress/e2e/amazon.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "75d1c8ca-9f9b-4cc8-b58b-5131c9c9953e",
+          "title": "amazon",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfuly search, filter, and select produc in amazon",
+              "fullTitle": "amazon Successfuly search, filter, and select produc in amazon",
+              "timedOut": null,
+              "duration": 27136,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1920, 1080);\n// Akses halaman Amazon dengan timeout lebih panjang\ncy.visit(Cypress.env(\"AMAZON_URL\"), {\n  timeout: 120000\n});\ncy.get(\"#twotabsearchtextbox\", {\n  timeout: 120000\n}).should(\"be.visible\");\namazon.searchForProduct(\"chair\");\namazon.verifyResult(\"chair\");\namazon.sortByPriceHighToLow();\namazon.verifySortByPriceHighToLow();\namazon.selectProduct();\namazon.verifySelectedProduct();",
+              "err": {},
+              "uuid": "df7daa33-7224-4f31-a732-020798bceacb",
+              "parentUUID": "75d1c8ca-9f9b-4cc8-b58b-5131c9c9953e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "df7daa33-7224-4f31-a732-020798bceacb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27136,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/html",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
