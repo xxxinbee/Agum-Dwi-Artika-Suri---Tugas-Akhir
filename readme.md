@@ -1,7 +1,7 @@
 Testcase Agoda:
 
 Encountered intermittent issues with certain elements, such as the passport information field and the add-on modal.
-→ Conditional handling has been implemented to manage these dynamic elements gracefully.
+→ Conditional handling has been implemented to manage these dynamic elements.
 
 On the latest test run, the price retrieved on the search results page did not match the price in the detail view, causing price assertion failure.
 
