@@ -104,7 +104,7 @@ class AgodaPage {
         cy.get('[data-component="mob-flight-price-adult-desc"]').should(
           "contain",
           initialPrice
-        ); // Misal: selector untuk harga booking
+        ); 
         cy.log(`Verifikasi harga awal: ${initialPrice}`);
       });
 
@@ -228,7 +228,7 @@ class AgodaPage {
       }
 
       // Verifikasi data atau langkah berikutnya setelah menangani modal
-      cy.wait(1000);  // Gantilah dengan selector untuk verifikasi data
+      cy.wait(1000);  
     });
     
   }

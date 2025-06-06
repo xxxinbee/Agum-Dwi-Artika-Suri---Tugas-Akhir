@@ -1,8 +1,8 @@
 class AmazonPage {
     // Method untuk mencari produk
     searchForProduct(product) {
-      cy.get("#twotabsearchtextbox").type(product); // Menulis ke kotak pencarian
-      cy.get("#nav-search-submit-button").click(); // Klik tombol pencarian
+      cy.get("#twotabsearchtextbox").type(product); 
+      cy.get("#nav-search-submit-button").click(); 
     }
   
     verifyResult(product) {
@@ -25,7 +25,7 @@ class AmazonPage {
     // Method untuk memilih produk paling kanan di baris pertama
     selectProduct() {
       cy.get('[data-component-type="s-search-result"]')
-        .filter(':visible') // Pastikan hanya item yang terlihat
+        .filter(':visible') 
         .then((products) => {
           const numberOfProductsInRow = Math.floor(window.innerWidth / 240); // Misalnya 240px adalah lebar tiap card produk
           const lastProductIndex = numberOfProductsInRow - 1; // Hitung index produk paling kanan
@@ -60,7 +60,7 @@ class AmazonPage {
     
         
     }
-
+    // verify nama dan harga produk sesuai dengan card baris pertama paling kanan
     verifySelectedProduct() {
         cy.get('@selectedProductName').should('exist');  
         cy.get('@productPrice').should('exist');  
