@@ -1,0 +1,22 @@
+{
+  "passenger": {
+    "firstName": "Ablume",
+    "lastName": "Raechel",
+    "email": "abloome@example.com",
+    "country": "Indonesia",
+    "phoneCountryCode": "+62",
+    "phoneNumber": "81234567890",
+    "birthDay": "15",
+    "birthMonth": "Januari",
+    "birthYear": "1998",
+    "gender": "Wanita",
+    "passportNumber": "A12345678",
+    "passportExpiryDate": "31",
+    "passportExpiryMonth": "Juli",
+    "passportExpiryYear": "2030",
+    "departureCity": "Jakarta",
+    "destinationCity": "Singapura",
+    "airline": "Batik Air"
+  }
+  
+}

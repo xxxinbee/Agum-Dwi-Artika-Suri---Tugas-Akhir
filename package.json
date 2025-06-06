@@ -1,0 +1,27 @@
+{
+  "name": "agum-dwi-artika-suri_tugas-akhir",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run --reporter mochawesome",
+    "cy:merge-report": "npx mochawesome-merge cypress/reports/html/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/html --reportFilename index.html",
+    "cy:test-html": "npm run cy:run && npm run cy:merge-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.4.1",
+    "cypress-iframe": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+
+
+
+}
